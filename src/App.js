@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Cards, Chart, CountryPicker } from './components'
 import styles from './App.module.css'
 import {fetchData} from './api';
+import Navbar  from './components/Navbar';
+// import About from './components/About'
+// import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // import image from './images/covid.png';
 
@@ -12,6 +15,7 @@ class App extends Component {
     data: {}, 
     country: ''
   }
+
 
   async componentDidMount() {
     const fetchedData = await fetchData();
@@ -27,12 +31,17 @@ class App extends Component {
   render(){
     const {data, country } = this.state;
   return (
+    <div className="App">
+    <Navbar/>
+    
     <div className={styles.container}>
       {/* <img className={styles.image} src={image} alt="COVID-19" /> */}
       <Cards data = {data} />
       <CountryPicker handleCountryChange ={this.handleCountryChange}/>
       <Chart data = {data} country = {country} /> 
     </div>
+    </div>
+
   );
 }
 }
