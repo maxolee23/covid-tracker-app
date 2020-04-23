@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import { Toolbar, AppBar, Typography } from '@material-ui/core';
@@ -15,13 +15,16 @@ import Zoom from '@material-ui/core/Zoom';
 
 // import createHistory from 'history/createBrowserHistory'
 
-
   function HomeIcon(props) {
     return (
       <SvgIcon {...props}>
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </SvgIcon>
     );
+  }
+
+  const divStyle = {
+      textAlign: 'center'
   }
 
 
@@ -72,12 +75,10 @@ export default function BackToTop(props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <Toolbar>
-        {/* <HomeIcon />
-        <InfoIcon/>
-      <HomeIcon color="primary"/> */}
-          <Typography variant="h6">COVID-19 Tracker</Typography>
-        </Toolbar>
+          <Toolbar>
+          <Typography color='textSecondary'variant="h6" align="center">COVID-19 Tracker</Typography>
+          </Toolbar>
+        
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <Container>

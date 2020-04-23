@@ -5,11 +5,13 @@ import cx from 'classnames';
 
 import styles from './Cards.module.css';
 
-const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
+const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}, isDark}, props) => {
     // console.log(confirmed)
     if(!confirmed) {
         return 'Loading...'
     }
+
+
     return(
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
@@ -44,8 +46,8 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                     </CardContent>
                 </Grid>
             </Grid>
-
         </div>
+    
     )
 }
 

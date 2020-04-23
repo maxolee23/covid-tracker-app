@@ -2,6 +2,10 @@ body {
   background-color: rgb(250, 250,250);
 }
 
+/* body {
+  background-color: rgba(red, green, blue, alpha);
+} */
+
 .App {
   align-items: center;
   display: flex;
@@ -13,9 +17,9 @@ body {
   flex-direction: column;
 }
 
-/* .image {
-  width: 200px;
-  margin-top: 25px;
+.image {
+  width: 150px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 770px) {
@@ -26,4 +30,4 @@ body {
   .image {
     width: 100%;
   }
-} */
+} 
